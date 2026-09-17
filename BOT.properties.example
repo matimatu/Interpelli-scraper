@@ -1,0 +1,3 @@
+[DEFAULT]
+BOT_TOKEN=INSERT_HERE_UR_BOT_TOKEN_STRING
+CHAT_ID=INSERT_HERE_UR_CHAT_ID_STRING       #find this id using @RawDataBot or @userinfobot
