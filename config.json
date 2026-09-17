@@ -1,0 +1,22 @@
+{
+  
+  "sources": [
+    {
+      "class_code": "A041",
+      "province_codes": ["IM","SV"]
+    },
+    {
+      "class_code": "A040",
+      "province_codes": ["IM"]
+    },
+    {
+      "class_code": "A042",
+      "province_codes": ["ALL"]
+    },
+    {
+      "class_code": "ADEE",
+      "province_codes": ["IM"]
+    }
+  ],
+  "max_concurrent": 1
+}
