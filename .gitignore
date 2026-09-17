@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+output/*.json
+*.log
+.DS_Store
+BOT.properties
+Interpelli-scraper.code-workspace
+setup-interpelli-telegram.md
