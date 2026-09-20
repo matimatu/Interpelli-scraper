@@ -49,12 +49,14 @@ def run():
     tg_message = ""
     Path("output").mkdir(exist_ok=True)
     output_path = Path("output/interpelli.json")
-    if output_path:
+    if output_path.exists() and output_path.stat().st_size > 0:
         dati = json.loads(output_path.read_text(
         encoding="utf-8"
         ))  
     else:
-        dati = []
+        dati = {
+        "results": []
+    }
 
     container_old_annunci = ResultsContainer.from_dict(dati)
     container_all_annunci = ResultsContainer.from_dict(dati)
