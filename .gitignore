@@ -8,3 +8,4 @@ output/*.json
 BOT.properties
 Interpelli-scraper.code-workspace
 setup-interpelli-telegram.md
+config.json
