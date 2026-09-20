@@ -4,7 +4,6 @@ from pathlib import Path
 
 import typer
 from telegram import Bot
-from parser import extract_announces_links
 from scraper import download_announces_html
 from telegram_notifier import get_telegram_configuration,send_message
 from data_structure import ResultsContainer
@@ -60,7 +59,6 @@ def run():
 
     container_old_annunci = ResultsContainer.from_dict(dati)
     container_all_annunci = ResultsContainer.from_dict(dati)
-    old_results = dati["results"]
     container_new_annunci = ResultsContainer()
 
     #-------------------------------------------------------------CICLO RICERCA INTERPELLI ------------------------------------------------------------------------
@@ -83,21 +81,7 @@ def run():
             if not link_annunci:
                 continue
             new_link_annunci = container_old_annunci.get_new_links(class_code,province_code,link_annunci)
-            # old_result_compatible = ""
-            # for old_result in old_results :
-            #     if class_code is old_result["class_code"]:
-            #         old_result_compatible = old_result
-            #         break
-            # new_link_annunci = []
-            # if old_result_compatible:
-            #     for old_announcement in old_result_compatible["announcements"]:
-            #         if old_announcement["province_code"] is  province_code:
-            #             old_link_annunci = old_announcement["links"]
-            #             new_link_annunci = [
-            #                     link_annuncio
-            #                     for link_annuncio in old_announcement["links"]
-            #                     if link_annuncio not in link_annunci
-            #                 ]
+         
             for link in new_link_annunci:
                 container_new_annunci.add_link(class_code, province_code, link)
                 container_all_annunci.add_link(class_code, province_code, link)

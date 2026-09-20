@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 
 
-def extract_announces_links(html: str) -> list[str]:
+def extract_announces_links(html: str) -> list[str]:    #TODO cambiare metodo e integrarlo effettivamente per aiutare lo scraping
     soup = BeautifulSoup(html, "html.parser")
 
     return [
